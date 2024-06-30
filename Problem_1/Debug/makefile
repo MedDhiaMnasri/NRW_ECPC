@@ -60,8 +60,8 @@ all: main-build
 main-build: Problem_1.elf secondary-outputs
 
 # Tool invocations
-Problem_1.elf Problem_1.map: $(OBJS) $(USER_OBJS) C:\Users\Dhia\ Mnasri\Desktop\Problem_1\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Problem_1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Dhia Mnasri\Desktop\Problem_1\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Problem_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Problem_1.elf Problem_1.map: $(OBJS) $(USER_OBJS) C:\Users\Dhia\ Mnasri\Desktop\NRW_ECPC\Problem_1\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Problem_1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Dhia Mnasri\Desktop\NRW_ECPC\Problem_1\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Problem_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
